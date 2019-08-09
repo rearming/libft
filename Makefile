@@ -6,7 +6,7 @@
 #    By: bshanae <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/05 13:31:11 by bshanae           #+#    #+#              #
-#    Updated: 2019/05/24 15:43:59 by sleonard         ###   ########.fr        #
+#    Updated: 2019/08/09 19:10:25 by sleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,8 @@ MEMORY_OBJ = $(addprefix $(OBJ_DIR), $(MEMORY_FILES:.c=.o))
 # ============================================================================ #
 
 UTILS_FILES =			\
-	count_digits.c		\
-	count_digits_base.c	\
+	ft_count_digits.c		\
+	ft_count_digits_base.c	\
 	ft_isdigit.c		\
 	ft_isalpha.c		\
 	ft_isascii.c		\
@@ -155,7 +155,7 @@ LIST_FILES = 			\
 	ft_lstiter.c		\
 	ft_lstmap.c			\
 	ft_lstnew.c			\
-	ft_lstaddback.c \
+	ft_lstaddback.c 	\
 
 LIST_DIR = 				\
 	./src_list/
@@ -179,7 +179,6 @@ BTREE_DIR = 			\
 	./src_btree/
 
 BTREE_OBJ = $(addprefix $(OBJ_DIR), $(BTREE_FILES:.c=.o))
-
 
 # ============================================================================ #
 # ============================================================================ #
