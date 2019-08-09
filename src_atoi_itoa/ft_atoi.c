@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 18:33:02 by sselusa           #+#    #+#             */
-/*   Updated: 2019/05/22 11:56:22 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/08/09 17:08:39 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,10 @@ int					ft_atoi(const char *str)
 	while (ft_isdigit(str[pos]))
 	{
 		if (sign == 1 && (num > OVERFLOW ||
-			(num == OVERFLOW && str[pos] - '0' > 7)))
+			(num == OVERFLOW_FT && str[pos] - '0' > 7)))
 			return (-1);
 		if (sign == -1 && (num > OVERFLOW ||
-			(num == OVERFLOW && str[pos] - '0' > 8)))
+			(num == OVERFLOW_FT && str[pos] - '0' > 8)))
 			return (0);
 		num = num * 10 + str[pos] - '0';
 		pos++;
