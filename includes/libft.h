@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 15:58:41 by sselusa           #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/22 14:13:01 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -465,6 +465,18 @@ char				**clean_chr_mtrx(char **str);
 **	Same as ft_strlen, but returns length of string before specific char.
 */
 size_t				ft_strlen_char(char *str, char breaker);
+
+/*
+**	Returns string trimmed by 'breaker' symbol.
+**
+** 	Used functions:
+**	1. malloc
+**	2. ft_strlen
+**	3. ft_strchr
+**	4. ft_memcpy
+*/
+
+char				*ft_trim_c(const char *str, char breaker);
 
 /*
 **	Same usage as standard library printf.

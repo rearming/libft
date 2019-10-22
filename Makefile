@@ -119,6 +119,7 @@ STR_FILES = 			\
 	ft_strsplit.c       \
 	ft_toupper.c		\
 	ft_tolower.c		\
+	ft_trim_c.c			\
 
 STR_DIR = 				\
 	./src_string/
