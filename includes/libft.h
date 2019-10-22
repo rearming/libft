@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 15:58:41 by sselusa           #+#    #+#             */
-/*   Updated: 2019/10/22 14:13:01 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/22 16:37:03 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -479,8 +479,27 @@ size_t				ft_strlen_char(char *str, char breaker);
 char				*ft_trim_c(const char *str, char breaker);
 
 /*
+**	Takes begin of t_list and function that prints node of the list.
+**	It uses fflush() function to generate correct output even if print function
+** 	doing buffer management. This function is SLOW. Use only for debug purposes.
+*/
+void				ft_lstprint(t_list *begin, void (*print_function)(t_list*));
+
+/*
+**	lst_p functions family works the same as lst functions,
+**	but inside using raw pointers, passed to them, instead of malloc like
+**	lst functions do.
+*/
+
+t_list				*ft_lstnew_p(void *content, size_t content_size);
+void				ft_lstaddback_p(t_list **begin, void *content,
+						size_t content_size);
+void				ft_lstdel_p(t_list **begin);
+
+/*
 **	Same usage as standard library printf.
 */
+
 int					ft_printf(const char *format, ...);
 
 #endif

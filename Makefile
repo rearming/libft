@@ -157,6 +157,10 @@ LIST_FILES = 			\
 	ft_lstmap.c			\
 	ft_lstnew.c			\
 	ft_lstaddback.c 	\
+	ft_lstaddback_p.c	\
+	ft_lstdel_p.c		\
+	ft_lstnew_p.c		\
+	ft_lstprint.c		\
 
 LIST_DIR = 				\
 	./src_list/
