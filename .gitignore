@@ -1,6 +1,8 @@
+/cmake-build-debug/
 /temp/
 *.out
 *.a
 *.o
-.DS_Store
-.dSYM
+*.DS_Store*
+*.dSYM*
+*idea*
