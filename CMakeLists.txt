@@ -111,8 +111,14 @@ set(src_utils
         src_utils/ft_isprint.c)
 
 set(src_btrees
-        test/main.c
-        src_btrees/btree_create_node.c src_btrees/btree_insert_data.c src_btrees/btree_print.c src_btrees/btree_apply_preorder.c src_btrees/btree_apply_inorder.c src_btrees/btree_apply_postorder.c src_btrees/btree_find_item.c src_btrees/btree_level_count.c)
+        src_btrees/btree_create_node.c
+        src_btrees/btree_insert_data.c
+        src_btrees/btree_print.c
+        src_btrees/btree_apply_preorder.c
+        src_btrees/btree_apply_inorder.c
+        src_btrees/btree_apply_postorder.c
+        src_btrees/btree_find_item.c
+        src_btrees/btree_level_count.c)
 
 set(test
         test/main.c

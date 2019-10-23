@@ -12,7 +12,8 @@
 
 #include "ft_btrees.h"
 
-void	btree_insert_data(t_btree **root, void *item, int (*cmpfunc)(void *, void *))
+void	btree_insert_data(t_btree **root, void *item,
+			int (*cmpfunc)(void *, void *))
 {
 	if (!root)
 		return ;
