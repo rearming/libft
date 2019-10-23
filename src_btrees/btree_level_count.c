@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   btree_level_count.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 15:10:18 by sleonard          #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Created: 2019/10/23 18:26:57 by sleonard          #+#    #+#             */
+/*   Updated: 2019/10/23 18:48:24 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_btrees.h"
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+int			btree_level_count(t_btree *root)
 {
-	if (!s1 && !s2)
-		return (1);
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 || *s2)
+	int		left_levels;
+	int		right_levels;
+	int		result;
+
+	result = 0;
+	if (root)
 	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
+		left_levels = btree_level_count(root->left);
+		right_levels = btree_level_count(root->right);
+		result = ft_max(left_levels + 1, right_levels + 1);
 	}
-	if (*s1 != *s2)
-		return (0);
-	return (1);
+	return (result);
 }

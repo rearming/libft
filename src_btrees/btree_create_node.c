@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   btree_create_node.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 15:10:18 by sleonard          #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Created: 2019/10/23 12:11:38 by sleonard          #+#    #+#             */
+/*   Updated: 2019/10/23 12:14:05 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_btrees.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+t_btree		*btree_create_node(void *item)
 {
-	if (!s1 && !s2)
-		return (1);
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 || *s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	if (*s1 != *s2)
-		return (0);
-	return (1);
+	t_btree		*node;
+
+	if (!(node = (t_btree*)malloc(sizeof(t_btree))))
+		return (NULL);
+	node->data = item;
+	node->left = NULL;
+	node->right = NULL;
+	return (node);
 }

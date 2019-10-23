@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 15:58:41 by sselusa           #+#    #+#             */
-/*   Updated: 2019/10/22 17:17:28 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/23 12:24:17 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,14 @@
 # include <string.h>
 # include <fcntl.h>
 
+# include "ft_defines.h"
+# include "ft_structs.h"
+# include "ft_btrees.h"
+
 /*
 **	[Defines]
 */
 # define OVERFLOW_FT 922337203685477580L
-
-/*
-**	[Types]
-*/
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
 
 /*
 **	Fills (src) with (len) bytes of (chr). Returns a pointer to the
@@ -495,6 +489,8 @@ t_list				*ft_lstnew_p(void *content, size_t content_size);
 void				ft_lstaddback_p(t_list **begin, void *content,
 						size_t content_size);
 void				ft_lstdel_p(t_list **begin);
+
+int					ft_max(int a, int b);
 
 /*
 **	Same usage as standard library printf.

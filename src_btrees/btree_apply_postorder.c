@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   btree_apply_postorder.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 15:10:18 by sleonard          #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Created: 2019/10/23 16:33:43 by sleonard          #+#    #+#             */
+/*   Updated: 2019/10/23 17:29:28 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_btrees.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+void	btree_apply_postorder(t_btree *root, void (*applyf)(void*))
 {
-	if (!s1 && !s2)
-		return (1);
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 || *s2)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	if (*s1 != *s2)
-		return (0);
-	return (1);
+	if (!root)
+		return ;
+	btree_apply_postorder(root->left, applyf);
+	btree_apply_postorder(root->right, applyf);
+	applyf(root->data);
 }
