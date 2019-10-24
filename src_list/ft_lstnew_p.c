@@ -21,5 +21,6 @@ t_list	*ft_lstnew_p(void *content, size_t content_size)
 	new_node->content = content;
 	new_node->content_size = content_size;
 	new_node->next = NULL;
+	new_node->last = NULL;
 	return (new_node);
 }

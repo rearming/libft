@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 15:58:41 by sselusa           #+#    #+#             */
-/*   Updated: 2019/10/23 12:24:17 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/24 13:33:54 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -359,7 +359,7 @@ t_list				*ft_lstmap(t_list *alst, t_list *(*f)(t_list *elem));
 **	Obviously gets next line from (fd),
 **	returns -1 on error, 1 on success and 0 on EOF.
 */
-int					get_next_line(const int fd, char **line);
+int					get_next_line(int fd, char **line);
 
 /*
 **	Same as atoi (str) but returns number in (base).
@@ -486,8 +486,8 @@ void				ft_lstprint(t_list *begin, void (*print_function)(t_list*));
 */
 
 t_list				*ft_lstnew_p(void *content, size_t content_size);
-void				ft_lstaddback_p(t_list **begin, void *content,
-						size_t content_size);
+void				ft_lstaddback_p(t_list **list, void *content,
+									size_t content_size);
 void				ft_lstdel_p(t_list **begin);
 
 int					ft_max(int a, int b);

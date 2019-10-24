@@ -12,19 +12,21 @@
 
 #include "libft.h"
 
-void	ft_lstaddback_p(t_list **begin, void *content, size_t content_size)
+void	ft_lstaddback_p(t_list **list, void *content, size_t content_size)
 {
 	t_list	*tmp;
 
-	if (!begin)
+	if (!list)
 		return ;
-	if (!*begin)
+	if (!*list)
 	{
-		*begin = ft_lstnew_p(content, content_size);
-		return ;
+		*list = ft_lstnew_p(content, content_size);
+		(*list)->last = *list;
 	}
-	tmp = *begin;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = ft_lstnew_p(content, content_size);
+	else
+	{
+		tmp = (*list)->last;
+		tmp->next = ft_lstnew_p(content, content_size);
+		(*list)->last = tmp->next;
+	}
 }

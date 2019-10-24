@@ -43,7 +43,8 @@ set(src_math
         src_math/ft_abs.c
         src_math/ft_power.c
         src_math/ft_swap.c
-        src_math/is_even.c src_math/ft_max.c)
+        src_math/is_even.c
+        src_math/ft_max.c)
 
 set(src_memory
         src_memory/clean_chr_mtrx.c
@@ -113,7 +114,6 @@ set(src_utils
 set(src_btrees
         src_btrees/btree_create_node.c
         src_btrees/btree_insert_data.c
-        src_btrees/btree_print.c
         src_btrees/btree_apply_preorder.c
         src_btrees/btree_apply_inorder.c
         src_btrees/btree_apply_postorder.c
@@ -122,7 +122,8 @@ set(src_btrees
 
 set(test
         test/main.c
-        test/test_asserts.c)
+        test/test_asserts.c
+        test/btree_test_functions.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}
