@@ -6,7 +6,7 @@
 /*   By: sselusa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 15:58:41 by sselusa           #+#    #+#             */
-/*   Updated: 2019/10/24 13:33:54 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/24 15:26:51 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@
 # include "ft_defines.h"
 # include "ft_structs.h"
 # include "ft_btrees.h"
-
-/*
-**	[Defines]
-*/
-# define OVERFLOW_FT 922337203685477580L
 
 /*
 **	Fills (src) with (len) bytes of (chr). Returns a pointer to the
@@ -100,7 +95,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 ** Adds to (str1) string a copy of (str2) string, explicitly adding a \0.
 ** Returns a pointer to (str1).
 */
-char				*ft_strcat(char *str1, const char *str2);
+char				*ft_strcat(char *dest, const char *src);
 
 /*
 **	Adds to (str1) string a copy of (str2) string, not more than (len)

@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   avltree_create_node.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 15:23:40 by sleonard          #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Created: 2019/10/24 18:08:12 by sleonard          #+#    #+#             */
+/*   Updated: 2019/10/24 18:10:59 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "ft_btrees.h"
 
-void	*ft_memset(void *dest, int c, size_t n)
+t_avl_tree	*avl_create_node(void *item)
 {
-	char			*ptr;
+	t_avl_tree	*node;
 
-	if (n == 0)
-		return (dest);
-	ptr = (char*)dest;
-	while (n--)
-	{
-		*ptr = (char)c;
-		ptr++;
-	}
-	return (dest);
+	node = (t_avl_tree*)malloc(sizeof(t_avl_tree));
+	node->height = 1;
+	node->left = NULL;
+	node->right = NULL;
+	node->data = item;
+	return (node);
 }

@@ -6,7 +6,7 @@
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 11:32:49 by sleonard          #+#    #+#             */
-/*   Updated: 2019/10/24 13:14:06 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/24 18:10:59 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,12 @@ typedef struct		s_btree
 	void			*data;
 }					t_btree;
 
-enum	e_rb_color
+typedef struct			s_avl_tree
 {
-	RB_BLACK,
-	RB_RED
-};
-
-typedef struct		s_rb_tree
-{
-	struct s_rb_tree	*parent;
-	struct s_rb_tree	*left;
-	struct s_rb_tree	*right;
+	struct s_avl_tree	*left;
+	struct s_avl_tree	*right;
 	void				*data;
-	enum e_rb_color		color;
-}					t_rb_tree;
+	unsigned char		height; //default 1
+}						t_avl_tree;
 
 #endif

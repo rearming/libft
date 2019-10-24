@@ -10,21 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
-void	*ft_bzero(void *dest, size_t n)
+void	ft_bzero(void *dest, size_t len)
 {
-	unsigned char	*arr;
-	size_t			i;
-
-	i = 0;
-	arr = dest;
-	if (n == 0)
-		return (dest);
-	while (i < n)
-	{
-		arr[i] = 0;
-		i++;
-	}
-	return (dest);
+	ft_memset(dest, 0, len);
 }
