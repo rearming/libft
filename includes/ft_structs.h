@@ -35,7 +35,7 @@ typedef struct			s_avl_tree
 	struct s_avl_tree	*left;
 	struct s_avl_tree	*right;
 	void				*data;
-	unsigned char		height; //default 1
+	unsigned char		height;
 }						t_avl_tree;
 
 #endif

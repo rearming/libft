@@ -118,7 +118,7 @@ set(src_btrees
         src_btrees/btree_apply_inorder.c
         src_btrees/btree_apply_postorder.c
         src_btrees/btree_find_item.c
-        src_btrees/btree_level_count.c src_btrees/avl_tree_create_node.c src_btrees/avl_tree_helper_functions.c src_btrees/avl_tree_rebalancing.c src_btrees/avl_insert_data.c)
+        src_btrees/btree_level_count.c src_btrees/avl_tree_create_node.c src_btrees/avl_tree_helper_functions.c src_btrees/avl_tree_rebalancing.c src_btrees/avl_insert_data.c src_btrees/avl_delete_node.c)
 
 set(test
         test/main.c
