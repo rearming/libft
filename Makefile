@@ -6,7 +6,7 @@
 #    By: bshanae <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/05 13:31:11 by bshanae           #+#    #+#              #
-#    Updated: 2019/10/25 17:15:59 by sleonard         ###   ########.fr        #
+#    Updated: 2019/10/25 18:05:05 by sleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -216,13 +216,14 @@ OBJ_DIR = ./temp/
 
 COMP = gcc -Wall -Wextra -Werror -O2 -I ./includes
 
-all : update $(NAME)
+all : update $(NAME) printf
 
 $(NAME)	: $(OBJ_DIR) $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 update:
+	@git submodule init ft_printf
 	@git submodule update
 
 # folder
