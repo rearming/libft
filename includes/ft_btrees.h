@@ -6,7 +6,7 @@
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 11:46:01 by sleonard          #+#    #+#             */
-/*   Updated: 2019/10/25 14:23:37 by sleonard         ###   ########.fr       */
+/*   Updated: 2019/10/25 16:19:30 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void			avl_insert_data(t_avl_tree **root, void *data,
 void			avl_delete_node(t_avl_tree **root, void *data,
 					int (*cmpfunc)(void*, void*),
 					void (*data_del_func)(void*));
+void			free_btree(t_avl_tree *root, void (*data_del_func)(void*));
 
 unsigned char	avl_height(t_avl_tree *node);
 int				avl_bfactor(t_avl_tree *node);

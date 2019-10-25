@@ -15,20 +15,20 @@
 
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct			s_list
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-	struct s_list	*last;
-}					t_list;
+	void				*content;
+	size_t				content_size;
+	struct s_list		*next;
+	struct s_list		*last;
+}						t_list;
 
-typedef struct		s_btree
+typedef struct			s_btree
 {
-	struct s_btree	*left;
-	struct s_btree	*right;
-	void			*data;
-}					t_btree;
+	struct s_btree		*left;
+	struct s_btree		*right;
+	void				*data;
+}						t_btree;
 
 typedef struct			s_avl_tree
 {

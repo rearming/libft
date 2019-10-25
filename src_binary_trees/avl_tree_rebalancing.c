@@ -39,7 +39,6 @@ static void	avl_rotate_left(t_avl_tree **q_node)
 void		avl_rebalance(t_avl_tree **p_node)
 {
 	avl_fixheight(*p_node);
-
 	if (avl_bfactor(*p_node) == 2)
 	{
 		if (avl_bfactor((*p_node)->right) < 0)

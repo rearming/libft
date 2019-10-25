@@ -1,16 +1,14 @@
 cmake_minimum_required(VERSION 3.15)
 
+set(CMAKE_C_STANDARD 11)
+
 project(libft C)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+add_compile_options(-Wall -Wextra)
 
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${CMAKE_C_FLAGS}")
-
-set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${CMAKE_C_FLAGS} -O2 -Werror")
-
-message(STATUS ${CMAKE_C_FLAGS})
-
-set(CMAKE_C_STANDARD 11)
+if (${CMAKE_BUILD_TYPE} STREQUAL "Release")
+    add_compile_options(-O2 -Werror)
+endif()
 
 include_directories(includes)
 
@@ -111,19 +109,28 @@ set(src_utils
         src_utils/ft_isdigit.c
         src_utils/ft_isprint.c)
 
-set(src_btrees
-        src_btrees/btree_create_node.c
-        src_btrees/btree_insert_data.c
-        src_btrees/btree_apply_preorder.c
-        src_btrees/btree_apply_inorder.c
-        src_btrees/btree_apply_postorder.c
-        src_btrees/btree_find_item.c
-        src_btrees/btree_level_count.c src_btrees/avl_tree_create_node.c src_btrees/avl_tree_helper_functions.c src_btrees/avl_tree_rebalancing.c src_btrees/avl_insert_data.c src_btrees/avl_delete_node.c)
+set(src_binary_trees
+        src_binary_trees/btree_create_node.c
+        src_binary_trees/btree_insert_data.c
+        src_binary_trees/btree_apply_preorder.c
+        src_binary_trees/btree_apply_inorder.c
+        src_binary_trees/btree_apply_postorder.c
+        src_binary_trees/btree_find_item.c
+        src_binary_trees/btree_level_count.c
+        src_binary_trees/avl_tree_create_node.c
+        src_binary_trees/avl_tree_helper_functions.c
+        src_binary_trees/avl_tree_rebalancing.c
+        src_binary_trees/avl_insert_data.c
+        src_binary_trees/avl_delete_node.c
+        src_binary_trees/free_btree.c)
 
 set(test
         test/main.c
         test/test_asserts.c
-        test/btree_test_functions.c test/profiling_tests.c)
+        test/btree_test_functions.c
+        test/profiling_tests.c
+        test/avl_tree_test_functions.c
+        )
 
 add_library(ft STATIC
         ${src_atoi_itoa}
@@ -133,15 +140,18 @@ add_library(ft STATIC
         ${src_put}
         ${src_string}
         ${src_utils}
-        ${src_btrees}
+        ${src_binary_trees}
         )
-#
-#link_directories(cmake-build-debug
-#        )
+
+if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+    link_directories(cmake-build-debug)
+elseif(${CMAKE_BUILD_TYPE} STREQUAL "Release")
+    link_directories(cmake-build-release)
+endif()
 
 add_executable(test
         ${test}
         )
 
 target_link_libraries(test
-        "ft")
+        libft.a)

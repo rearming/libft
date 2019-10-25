@@ -6,7 +6,7 @@
 #    By: bshanae <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/05 13:31:11 by bshanae           #+#    #+#              #
-#    Updated: 2019/10/22 18:33:30 by sleonard         ###   ########.fr        #
+#    Updated: 2019/10/25 17:15:59 by sleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -172,16 +172,22 @@ LIST_OBJ = $(addprefix $(OBJ_DIR), $(LIST_FILES:.c=.o))
 # ============================================================================ #
 
 BTREE_FILES = 			\
-	#ft_btreeclean.c	\
-	#ft_btreedepth.c	\
-	#ft_btreefind.c		\
-	#ft_btreeinfix.c	\
-	#ft_btreeinsert.c	\
-	#ft_btreenew.c		\
-	#ft_btreeprefix.c	\
-	#ft_btreesuffix.c
+	btree_create_node.c          \
+    btree_insert_data.c          \
+    btree_apply_preorder.c       \
+    btree_apply_inorder.c        \
+    btree_apply_postorder.c      \
+    btree_find_item.c            \
+    btree_level_count.c          \
+    free_btree.c                 \
+    avl_tree_create_node.c       \
+    avl_tree_helper_functions.c  \
+    avl_tree_rebalancing.c       \
+    avl_insert_data.c            \
+    avl_delete_node.c            \
+
 BTREE_DIR = 			\
-	./src_btree/
+	./src_binary_trees/
 
 BTREE_OBJ = $(addprefix $(OBJ_DIR), $(BTREE_FILES:.c=.o))
 
