@@ -39,6 +39,7 @@ MATH_FILES =			\
 	ft_swap.c			\
 	is_even.c			\
 	ft_abs.c			\
+	ft_max.c			\
 
 MATH_DIR =				\
 	./src_math/
