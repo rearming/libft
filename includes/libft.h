@@ -465,6 +465,12 @@ size_t				ft_strlen_char(char *str, char breaker);
 **	4. ft_memcpy
 */
 
+
+/*
+**	Works like ft_strdup, but no strlen here.
+*/
+char				*ft_strdup_l(const char *src, size_t len);
+
 char				*ft_trim_c(const char *str, char breaker);
 
 /*
