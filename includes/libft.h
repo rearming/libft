@@ -364,7 +364,7 @@ long long			ft_atoll_base(char *str, int base);
 /*
 **	Returns count of digits in (nb).
 */
-int					ft_count_digits(int nb);
+int					ft_count_digits(long long nb);
 
 /*
 **	Returns count of digits in (nb) with (base).

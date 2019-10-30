@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_count_digits(int nb)
+int		ft_count_digits(long long nb)
 {
 	int		symb_n;
 
