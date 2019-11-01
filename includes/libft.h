@@ -364,7 +364,7 @@ long long			ft_atoll_base(char *str, int base);
 /*
 **	Returns count of digits in (nb).
 */
-int					ft_count_digits(int nb);
+int					ft_count_digits(long long nb);
 
 /*
 **	Returns count of digits in (nb) with (base).
@@ -464,6 +464,12 @@ size_t				ft_strlen_char(char *str, char breaker);
 **	3. ft_strchr
 **	4. ft_memcpy
 */
+
+
+/*
+**	Works like ft_strdup, but no strlen here.
+*/
+char				*ft_strdup_l(const char *src, size_t len);
 
 char				*ft_trim_c(const char *str, char breaker);
 

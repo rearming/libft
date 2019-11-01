@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_digits.c                                     :+:      :+:    :+:   */
+/*   ft_strdup_l.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sleonard <sleonard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 14:54:24 by sleonard          #+#    #+#             */
-/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*   Created: 2019/10/24 17:30:34 by sleonard          #+#    #+#             */
+/*   Updated: 2019/10/24 17:30:35 by sleonard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_digits(long long nb)
+char	*ft_strdup_l(const char *src, size_t len)
 {
-	int		symb_n;
+	char	*result;
 
-	symb_n = 0;
-	while ((nb >= 10) || (nb <= -10))
-	{
-		symb_n++;
-		nb /= 10;
-	}
-	return (symb_n + 1);
+	len++;
+	if (!(result = (char*)malloc(sizeof(char) * len)))
+		return (NULL);
+	ft_memcpy(result, src, len);
+	return (result);
 }

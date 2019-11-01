@@ -6,7 +6,7 @@
 #    By: bshanae <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/05 13:31:11 by bshanae           #+#    #+#              #
-#    Updated: 2019/10/25 17:15:59 by sleonard         ###   ########.fr        #
+#    Updated: 2019/10/28 18:57:40 by sleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ MATH_FILES =			\
 	ft_swap.c			\
 	is_even.c			\
 	ft_abs.c			\
+	ft_max.c			\
 
 MATH_DIR =				\
 	./src_math/
@@ -120,6 +121,7 @@ STR_FILES = 			\
 	ft_toupper.c		\
 	ft_tolower.c		\
 	ft_trim_c.c			\
+	ft_strdup_l.c		\
 
 STR_DIR = 				\
 	./src_string/
@@ -216,13 +218,14 @@ OBJ_DIR = ./temp/
 
 COMP = gcc -Wall -Wextra -Werror -O2 -I ./includes
 
-all : update $(NAME)
+all : update $(NAME) printf
 
 $(NAME)	: $(OBJ_DIR) $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 update:
+	@git submodule init ft_printf
 	@git submodule update
 
 # folder
