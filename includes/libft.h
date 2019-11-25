@@ -465,7 +465,6 @@ size_t				ft_strlen_char(char *str, char breaker);
 **	4. ft_memcpy
 */
 
-
 /*
 **	Works like ft_strdup, but no strlen here.
 */
@@ -498,5 +497,15 @@ int					ft_max(int a, int b);
 */
 
 int					ft_printf(const char *format, ...);
+
+/*
+**	Same usage as standard library printf but sends output to specified fd.
+*/
+int					ft_printf_fd(int fd, const char *format, ...);
+
+/*
+**	Same usage as standard library sprintf.
+*/
+int					ft_sprintf(char **out_str, const char *format, ...);
 
 #endif
