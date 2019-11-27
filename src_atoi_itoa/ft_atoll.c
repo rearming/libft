@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-long long	ft_atoll(char *str)
+long long	ft_atoll(const char *str)
 {
 	if (!str)
 		return (0);

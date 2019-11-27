@@ -359,7 +359,7 @@ int					get_next_line(int fd, char **line);
 /*
 **	Same as atoi (str) but returns number in (base).
 */
-long long			ft_atoll_base(char *str, int base);
+long long			ft_atoll_base(const char *str, int base);
 
 /*
 **	Returns count of digits in (nb).
@@ -411,7 +411,7 @@ char				*ft_lltoa_base(long long nbr,
 /*
 **	Same as atoi (str) but working with long long integers
 */
-long long			ft_atoll(char *str);
+long long			ft_atoll(const char *str);
 
 /*
 **	Same as atoi (str) but working with unsigned long long integers
@@ -507,5 +507,13 @@ int					ft_printf_fd(int fd, const char *format, ...);
 **	Same usage as standard library sprintf.
 */
 int					ft_sprintf(char **out_str, const char *format, ...);
+
+/*
+**	Converts null-terminated string to double value.
+**	Returns -1.0 in case of overflow
+**	(whole or fractional part > long long max / < long long min ).
+**	Returns 0.0 in case of invalid string.
+*/
+double		ft_strtod(const char *str);
 
 #endif

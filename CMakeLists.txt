@@ -22,7 +22,7 @@ set(src_atoi_itoa
         src_atoi_itoa/ft_lltoa_base.c
         src_atoi_itoa/ft_ulltoa.c
         src_atoi_itoa/ft_ulltoa_base.c
-        )
+        src_atoi_itoa/ft_strtod.c)
 
 set(src_list
         src_list/ft_lstadd.c
@@ -130,7 +130,7 @@ set(test
         test/btree_test_functions.c
         test/profiling_tests.c
         test/avl_tree_test_functions.c
-        )
+        test/test_strtod.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}
@@ -154,4 +154,4 @@ add_executable(test
         )
 
 target_link_libraries(test
-        libft.a)
+        "ft")
