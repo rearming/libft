@@ -18,6 +18,7 @@ char	*ft_readfile(int fd, size_t *out_size)
 		free(gnl.backup);
 		gnl.backup = gnl.temp_str;
 	}
-	*out_size = gnl.sum_len;
+	if (out_size)
+		*out_size = gnl.sum_len;
 	return (gnl.backup);
 }
