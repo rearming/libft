@@ -98,7 +98,7 @@ set(src_string
         src_string/ft_tolower.c
         src_string/ft_toupper.c
         src_string/ft_trim_c.c
-        src_string/get_next_line.c)
+        src_string/get_next_line.c src_string/ft_readfile.c)
 
 set(src_utils
         src_utils/ft_count_digits.c

@@ -24,6 +24,7 @@ ATOI_ITOA_FILES =		\
 	ft_lltoa_base.c		\
 	ft_ulltoa.c			\
 	ft_ulltoa_base.c	\
+	ft_strtod.c			\
 
 ATOI_ITOA_DIR = 			\
 	./src_atoi_itoa/
@@ -122,6 +123,7 @@ STR_FILES = 			\
 	ft_tolower.c		\
 	ft_trim_c.c			\
 	ft_strdup_l.c		\
+	ft_readfile.c		\
 
 STR_DIR = 				\
 	./src_string/

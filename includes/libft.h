@@ -369,7 +369,7 @@ int					ft_count_digits(long long nb);
 /*
 **	Returns count of digits in (nb) with (base).
 */
-int					ft_count_digits_base(char *str, int base);
+int					ft_count_digits_base(const char *str, int base);
 
 /*
 **	Returns (nbr) in (power).
@@ -515,5 +515,21 @@ int					ft_sprintf(char **out_str, const char *format, ...);
 **	Returns 0.0 in case of invalid string.
 */
 double		ft_strtod(const char *str);
+
+/*
+**	Allocate and return contents of file (fd). Returns NULL in case of  error.
+*/
+char	*ft_readfile(int fd, size_t *out_size);
+
+#  define READFILE_BUFFSIZE 10000
+
+typedef struct			s_ft_readfile
+{
+	char				*temp_str;
+	char				*backup;
+	char				buf[READFILE_BUFFSIZE + 1];
+	int					read_res;
+	size_t				sum_len;
+}						t_ft_readfile;
 
 #endif

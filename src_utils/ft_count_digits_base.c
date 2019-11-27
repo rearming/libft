@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_count_digits_base(char *str, int base)
+int		ft_count_digits_base(const char *str, int base)
 {
 	int		i;
 	char	test;
@@ -20,7 +20,7 @@ int		ft_count_digits_base(char *str, int base)
 	i = 0;
 	while (str[i])
 	{
-		test = ft_toupper(str[i]);
+		test = (char)ft_toupper(str[i]);
 		if ((ft_isdigit(test) && test <= '0' + base)
 			|| (test >= 'A' && test <= 'A' + base - 11))
 			i++;
