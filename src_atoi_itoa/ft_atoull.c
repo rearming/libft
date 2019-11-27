@@ -12,18 +12,6 @@
 
 #include "libft.h"
 
-static size_t			pass_spaces(const char *str)
-{
-	size_t	pos;
-
-	if (!str)
-		return (0);
-	pos = 0;
-	while ((str[pos] > 8 && str[pos] < 14) || str[pos] == 32)
-		pos++;
-	return (pos);
-}
-
 unsigned long long		ft_atoull(const char *str)
 {
 	unsigned long long	num;

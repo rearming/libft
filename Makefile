@@ -80,6 +80,8 @@ UTILS_FILES =			\
 	ft_isascii.c		\
 	ft_isprint.c		\
 	ft_isalnum.c		\
+	ft_isspace.c		\
+	pass_spaces.c		\
 
 UTILS_DIR =				\
 	./src_utils/

@@ -1,17 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtod.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rearming <rearming@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/18 20:28:25 by rearming          #+#    #+#             */
+/*   Updated: 2019/08/01 11:04:43 by sleonard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "stdio.h"
-
-static size_t		pass_spaces(const char *str)
-{
-	size_t	pos;
-
-	if (!str)
-		return (0);
-	pos = 0;
-	while ((str[pos] > 8 && str[pos] < 14) || str[pos] == 32)
-		pos++;
-	return (pos);
-}
 
 double		get_fract_part(long long fract)
 {
@@ -21,7 +20,7 @@ double		get_fract_part(long long fract)
 
 	i = 0;
 	fract_res = (double)fract;
-	while(i < digits)
+	while (i < digits)
 	{
 		fract_res /= 10;
 		i++;
@@ -32,8 +31,8 @@ double		get_fract_part(long long fract)
 double		ft_strtod(const char *str)
 {
 	double		result;
-	long long 	whole;
-	long long 	fract;
+	long long	whole;
+	long long	fract;
 	size_t		begin;
 
 	fract = 0;

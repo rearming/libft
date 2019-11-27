@@ -107,7 +107,9 @@ set(src_utils
         src_utils/ft_isalpha.c
         src_utils/ft_isascii.c
         src_utils/ft_isdigit.c
-        src_utils/ft_isprint.c)
+        src_utils/ft_isprint.c
+        src_utils/ft_isspace.c
+        src_utils/pass_spaces.c)
 
 set(src_binary_trees
         src_binary_trees/btree_create_node.c

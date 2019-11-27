@@ -38,4 +38,15 @@ typedef struct			s_avl_tree
 	unsigned char		height;
 }						t_avl_tree;
 
+# define READFILE_BUFFSIZE 10000
+
+typedef struct			s_ft_readfile
+{
+	char				*temp_str;
+	char				*backup;
+	char				buf[READFILE_BUFFSIZE + 1];
+	int					read_res;
+	size_t				sum_len;
+}						t_ft_readfile;
+
 #endif

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_readfile.c                                      :+:      :+:    :+:   */
+/*   pass_spaces.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rearming <rearming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,25 +12,14 @@
 
 #include "libft.h"
 
-char	*ft_readfile(int fd, size_t *out_size)
+size_t		pass_spaces(const char *str)
 {
-	t_ft_readfile	gnl;
+	size_t	pos;
 
-	gnl.sum_len = 0;
-	gnl.backup = malloc(1);
-	gnl.backup[0] = 0;
-	gnl.temp_str = NULL;
-	if (fd < 0 || read(fd, gnl.buf, 0) < 0)
-		return (NULL);
-	while ((gnl.read_res = read(fd, gnl.buf, READFILE_BUFFSIZE)))
-	{
-		gnl.sum_len += gnl.read_res;
-		gnl.buf[gnl.read_res] = '\0';
-		gnl.temp_str = ft_strljoin(gnl.backup, gnl.buf, gnl.sum_len);
-		free(gnl.backup);
-		gnl.backup = gnl.temp_str;
-	}
-	if (out_size)
-		*out_size = gnl.sum_len;
-	return (gnl.backup);
+	if (!str)
+		return (0);
+	pos = 0;
+	while (ft_isspace(str[pos]))
+		pos++;
+	return (pos);
 }
