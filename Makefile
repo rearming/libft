@@ -126,6 +126,7 @@ STR_FILES = 			\
 	ft_trim_c.c			\
 	ft_strdup_l.c		\
 	ft_readfile.c		\
+	ft_strlen_char.c	\
 
 STR_DIR = 				\
 	./src_string/
