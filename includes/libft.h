@@ -453,7 +453,7 @@ char				**clean_chr_mtrx(char **str);
 /*
 **	Same as ft_strlen, but returns length of string before specific char.
 */
-size_t				ft_strlen_char(char *str, char breaker);
+size_t				ft_strlen_char(const char *str, char breaker);
 
 /*
 **	Returns string trimmed by 'breaker' symbol.
