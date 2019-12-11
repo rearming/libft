@@ -222,7 +222,7 @@ OBJ = 					\
 
 OBJ_DIR = ./temp/
 
-COMP = gcc -Wall -Wextra -Werror -O2 -I ./includes
+COMP = clang -Wall -Wextra -Werror -O2 -I ./includes
 
 all : update $(NAME) printf
 
