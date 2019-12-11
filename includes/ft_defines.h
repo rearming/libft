@@ -16,6 +16,7 @@
 # define TRUE 1
 # define FALSE 0
 
+# define BUFF_SIZE 1
 # define OVERFLOW_FT 922337203685477580L
 
 #endif

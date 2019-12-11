@@ -531,4 +531,9 @@ int					ft_isspace(char c);
 */
 size_t				pass_spaces(const char *str);
 
+/*
+**	Simple and stable version of get_next_line. Doesn't support multiple fd.
+*/
+int					gnl(int fd, char **line);
+
 #endif

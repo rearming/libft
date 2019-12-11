@@ -98,7 +98,7 @@ set(src_string
         src_string/ft_tolower.c
         src_string/ft_toupper.c
         src_string/ft_trim_c.c
-        src_string/get_next_line.c src_string/ft_readfile.c)
+        src_string/get_next_line.c src_string/ft_readfile.c src_string/gnl.c)
 
 set(src_utils
         src_utils/ft_count_digits.c
@@ -132,7 +132,7 @@ set(test
         test/btree_test_functions.c
         test/profiling_tests.c
         test/avl_tree_test_functions.c
-        test/test_strtod.c)
+        test/test_strtod.c test/test_get_next_line.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}
@@ -151,9 +151,12 @@ elseif(${CMAKE_BUILD_TYPE} STREQUAL "Release")
     link_directories(cmake-build-release)
 endif()
 
+link_directories(ft_printf)
+
 add_executable(test
         ${test}
         )
 
 target_link_libraries(test
-        "ft")
+        "ft"
+        "ftprintf")

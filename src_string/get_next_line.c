@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include "get_next_line.h"
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
 int			cut_result(char **line, char **back_str)
 {
@@ -21,7 +18,6 @@ int			cut_result(char **line, char **back_str)
 	char	*tmp;
 
 	*line = NULL;
-	tmp = NULL;
 	len = 0;
 	while ((*back_str)[len] != '\n' && (*back_str)[len] != '\0')
 		len++;
