@@ -22,7 +22,8 @@ set(src_atoi_itoa
         src_atoi_itoa/ft_lltoa_base.c
         src_atoi_itoa/ft_ulltoa.c
         src_atoi_itoa/ft_ulltoa_base.c
-        src_atoi_itoa/ft_strtod.c)
+        src_atoi_itoa/ft_strtod.c
+        )
 
 set(src_list
         src_list/ft_lstadd.c
@@ -35,14 +36,17 @@ set(src_list
         src_list/ft_lstmap.c
         src_list/ft_lstnew.c
         src_list/ft_lstnew_p.c
-        src_list/ft_lstprint.c)
+        src_list/ft_lstprint.c
+        )
 
 set(src_math
         src_math/ft_abs.c
         src_math/ft_power.c
         src_math/ft_swap.c
         src_math/is_even.c
-        src_math/ft_max.c)
+        src_math/ft_max.c
+        src_math/ft_min.c
+        )
 
 set(src_memory
         src_memory/clean_chr_mtrx.c
@@ -54,7 +58,8 @@ set(src_memory
         src_memory/ft_memcpy.c
         src_memory/ft_memdel.c
         src_memory/ft_memmove.c
-        src_memory/ft_memset.c)
+        src_memory/ft_memset.c
+        )
 
 set(src_put
         src_put/ft_putchar.c
@@ -98,7 +103,10 @@ set(src_string
         src_string/ft_tolower.c
         src_string/ft_toupper.c
         src_string/ft_trim_c.c
-        src_string/get_next_line.c src_string/ft_readfile.c src_string/gnl.c)
+        src_string/get_next_line.c
+        src_string/ft_readfile.c
+        src_string/gnl.c
+        )
 
 set(src_utils
         src_utils/ft_count_digits.c
@@ -109,7 +117,8 @@ set(src_utils
         src_utils/ft_isdigit.c
         src_utils/ft_isprint.c
         src_utils/ft_isspace.c
-        src_utils/pass_spaces.c)
+        src_utils/pass_spaces.c
+        )
 
 set(src_binary_trees
         src_binary_trees/btree_create_node.c
@@ -124,7 +133,8 @@ set(src_binary_trees
         src_binary_trees/avl_tree_rebalancing.c
         src_binary_trees/avl_insert_data.c
         src_binary_trees/avl_delete_node.c
-        src_binary_trees/free_btree.c)
+        src_binary_trees/free_btree.c
+        )
 
 set(test
         test/main.c
@@ -132,7 +142,8 @@ set(test
         test/btree_test_functions.c
         test/profiling_tests.c
         test/avl_tree_test_functions.c
-        test/test_strtod.c test/test_get_next_line.c)
+        test/test_strtod.c
+        test/test_get_next_line.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}

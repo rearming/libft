@@ -41,6 +41,7 @@ MATH_FILES =			\
 	is_even.c			\
 	ft_abs.c			\
 	ft_max.c			\
+	ft_min.c			\
 
 MATH_DIR =				\
 	./src_math/
