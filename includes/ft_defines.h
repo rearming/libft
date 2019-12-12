@@ -18,6 +18,9 @@
 
 # define BUFF_SIZE 1
 # define OVERFLOW_FT 922337203685477580L
-typedef unsigned long long ft_uint64_t;
+
+# define FT_FUCK_NORME_LONG_LONG unsigned long long
+
+typedef FT_FUCK_NORME_LONG_LONG	t_ft_uint64;
 
 #endif

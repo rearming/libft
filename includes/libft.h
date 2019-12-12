@@ -536,4 +536,6 @@ size_t				pass_spaces(const char *str);
 */
 int					gnl(int fd, char **line);
 
+int					ft_min(int a, int b);
+
 #endif
