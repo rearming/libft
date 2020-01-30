@@ -538,4 +538,10 @@ int					gnl(int fd, char **line);
 
 int					ft_min(int a, int b);
 
+/*
+**	Concatenate text from various number of files.
+**	Takes number of files as first argument and paths to files.
+*/
+char				*ft_read_files(int files_nbr, ...);
+
 #endif

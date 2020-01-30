@@ -106,7 +106,7 @@ set(src_string
         src_string/get_next_line.c
         src_string/ft_readfile.c
         src_string/gnl.c
-        )
+        src_string/ft_read_files.c)
 
 set(src_utils
         src_utils/ft_count_digits.c

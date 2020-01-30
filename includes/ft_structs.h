@@ -14,6 +14,7 @@
 # define FT_STRUCTS_H
 
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct			s_list
 {
@@ -48,5 +49,16 @@ typedef struct			s_ft_readfile
 	int					read_res;
 	size_t				sum_len;
 }						t_ft_readfile;
+
+typedef struct			s_ft_read_files
+{
+	char				*temp_str;
+	char				*backup;
+	size_t				sum_len;
+	va_list				ap;
+	char				*str_file;
+	size_t				file_size;
+	int					fd;
+}						t_ft_read_files;
 
 #endif
