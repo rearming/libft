@@ -6,7 +6,7 @@
 #    By: bshanae <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/05 13:31:11 by bshanae           #+#    #+#              #
-#    Updated: 2019/10/28 18:57:40 by sleonard         ###   ########.fr        #
+#    Updated: 2020/01/30 12:28:45 by sleonard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -129,6 +129,7 @@ STR_FILES = 			\
 	ft_readfile.c		\
 	ft_strlen_char.c	\
 	gnl.c				\
+	ft_read_files.c		\
 	ft_del_whitespaces.c\
 
 STR_DIR = 				\
