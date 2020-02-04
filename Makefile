@@ -129,6 +129,7 @@ STR_FILES = 			\
 	ft_readfile.c		\
 	ft_strlen_char.c	\
 	gnl.c				\
+	ft_del_whitespaces.c\
 
 STR_DIR = 				\
 	./src_string/

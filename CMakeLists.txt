@@ -106,7 +106,7 @@ set(src_string
         src_string/get_next_line.c
         src_string/ft_readfile.c
         src_string/gnl.c
-        src_string/ft_read_files.c)
+        src_string/ft_read_files.c src_string/ft_del_whitespaces.c)
 
 set(src_utils
         src_utils/ft_count_digits.c
@@ -143,7 +143,7 @@ set(test
         test/profiling_tests.c
         test/avl_tree_test_functions.c
         test/test_strtod.c
-        test/test_get_next_line.c)
+        test/test_get_next_line.c test/test_del_whitespaces.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}

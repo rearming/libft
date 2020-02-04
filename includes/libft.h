@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <fcntl.h>
+# include <stdbool.h>
 
 # include "ft_defines.h"
 # include "ft_structs.h"
@@ -543,5 +544,10 @@ int					ft_min(int a, int b);
 **	Takes number of files as first argument and paths to files.
 */
 char				*ft_read_files(int files_nbr, ...);
+
+/*
+**	Allocates and returns string with exactly one whitespace between words.
+*/
+char				*ft_del_whitespaces(const char *str);
 
 #endif

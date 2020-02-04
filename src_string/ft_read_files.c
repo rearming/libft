@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_read_files.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sleonard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/04 13:46:48 by sleonard          #+#    #+#             */
+/*   Updated: 2020/02/04 13:46:52 by sleonard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "stdarg.h"
 #include "libft.h"
 
@@ -7,7 +19,7 @@ static inline char	*exit_clean(char *ptr_to_free)
 	return (NULL);
 }
 
-char			*ft_read_files(int files_nbr, ...)
+char				*ft_read_files(int files_nbr, ...)
 {
 	t_ft_read_files		rf_cat;
 	int					i;
