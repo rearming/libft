@@ -18,6 +18,7 @@ void	free_btree(t_avl_tree *root, void (*data_del_func)(void*))
 		return ;
 	free_btree(root->left, data_del_func);
 	free_btree(root->right, data_del_func);
-	data_del_func(root->data);
+	if (data_del_func)
+		data_del_func(root->data);
 	free(root);
 }
