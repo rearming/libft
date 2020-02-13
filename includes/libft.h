@@ -21,6 +21,7 @@
 # include <string.h>
 # include <fcntl.h>
 # include <stdbool.h>
+# include <stdint.h>
 
 # include "ft_defines.h"
 # include "ft_structs.h"
@@ -549,5 +550,11 @@ char				*ft_read_files(int files_nbr, ...);
 **	Allocates and returns string with exactly one whitespace between words.
 */
 char				*ft_del_whitespaces(const char *str);
+
+bool				ft_stack_init(t_stack *stack, int size);
+bool				ft_stack_push(t_stack *stack, void *data, int data_size);
+t_stack_elem		ft_stack_pop(t_stack *stack);
+t_stack_elem		ft_stack_peek(t_stack *stack);
+void				ft_stack_free(t_stack *stack);
 
 #endif

@@ -15,6 +15,22 @@
 
 # include <stdlib.h>
 # include <stdarg.h>
+# include <stdbool.h>
+
+# define STACK_NO_COPY (-1)
+
+typedef struct			s_stack_elem
+{
+	void				*data;
+	int					size;
+}						t_stack_elem;
+
+typedef struct			s_stack
+{
+	t_stack_elem		*elems;
+	int					size;
+	int					last_elem;
+}						t_stack;
 
 typedef struct			s_list
 {

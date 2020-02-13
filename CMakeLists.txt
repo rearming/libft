@@ -106,7 +106,8 @@ set(src_string
         src_string/get_next_line.c
         src_string/ft_readfile.c
         src_string/gnl.c
-        src_string/ft_read_files.c src_string/ft_del_whitespaces.c)
+        src_string/ft_read_files.c
+        src_string/ft_del_whitespaces.c)
 
 set(src_utils
         src_utils/ft_count_digits.c
@@ -136,6 +137,10 @@ set(src_binary_trees
         src_binary_trees/free_btree.c
         )
 
+set(src_stack
+        src_stack/ft_stack.c
+        )
+
 set(test
         test/main.c
         test/test_asserts.c
@@ -143,7 +148,9 @@ set(test
         test/profiling_tests.c
         test/avl_tree_test_functions.c
         test/test_strtod.c
-        test/test_get_next_line.c test/test_del_whitespaces.c)
+        test/test_get_next_line.c
+        test/test_del_whitespaces.c
+        test/test_t_stack.c)
 
 add_library(ft STATIC
         ${src_atoi_itoa}
@@ -154,6 +161,7 @@ add_library(ft STATIC
         ${src_string}
         ${src_utils}
         ${src_binary_trees}
+        ${src_stack}
         )
 
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")

@@ -22,9 +22,9 @@ char	*ft_trim_c(const char *str, char breaker)
 		return (NULL);
 	while (*str == breaker)
 		str++;
-	last_char = (t_ft_uint64)ft_strchr(str, breaker);
+	last_char = (uint64_t)ft_strchr(str, breaker);
 	if (last_char)
-		res_len = (t_ft_uint64)ft_strchr(str, breaker) - (t_ft_uint64)str;
+		res_len = (uint64_t)ft_strchr(str, breaker) - (uint64_t)str;
 	else
 		res_len = ft_strlen(str);
 	if (!(result = (char*)malloc(sizeof(char) * res_len + 1)))

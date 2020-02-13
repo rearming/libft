@@ -203,6 +203,18 @@ BTREE_DIR = 			\
 BTREE_OBJ = $(addprefix $(OBJ_DIR), $(BTREE_FILES:.c=.o))
 
 # ============================================================================ #
+# BTREE
+# ============================================================================ #
+
+STACK_FILES = 			\
+	ft_stack.c			\
+
+STACK_DIR = 			\
+	./src_stack/
+
+STACK_OBJ = $(addprefix $(OBJ_DIR), $(STACK_FILES:.c=.o))
+
+# ============================================================================ #
 # ============================================================================ #
 # LIBFT
 # ============================================================================ #
@@ -222,6 +234,7 @@ OBJ = 					\
 	$(BTREE_OBJ)    	\
 	$(ATOI_ITOA_OBJ)	\
 	$(MATH_OBJ)			\
+	$(STACK_OBJ)		\
 
 OBJ_DIR = ./temp/
 
@@ -271,6 +284,10 @@ $(OBJ_DIR)%.o : $(MATH_DIR)%.c
 
 # atoi and itoa obj
 $(OBJ_DIR)%.o : $(ATOI_ITOA_DIR)%.c
+	$(COMP) -c $< -o $@
+
+# atoi and itoa obj
+$(OBJ_DIR)%.o : $(STACK_DIR)%.c
 	$(COMP) -c $< -o $@
 
 clean :
