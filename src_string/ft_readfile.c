@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_readfile(int fd, size_t *out_size)
+char		*ft_readfile(int fd, size_t *out_size, int buff_size)
 {
 	t_ft_readfile	gnl;
 
@@ -20,9 +20,14 @@ char	*ft_readfile(int fd, size_t *out_size)
 	gnl.backup = malloc(1);
 	gnl.backup[0] = 0;
 	gnl.temp_str = NULL;
-	if (fd < 0 || read(fd, gnl.buf, 0) < 0)
+	gnl.buf = malloc(sizeof(char) * (buff_size + 1));
+	if (buff_size <= 0 || !gnl.buf || fd < 0 || read(fd, gnl.buf, 0) < 0)
+	{
+		free(gnl.backup);
+		free(gnl.buf);
 		return (NULL);
-	while ((gnl.read_res = read(fd, gnl.buf, READFILE_BUFFSIZE)))
+	}
+	while ((gnl.read_res = read(fd, gnl.buf, buff_size)))
 	{
 		gnl.sum_len += gnl.read_res;
 		gnl.buf[gnl.read_res] = '\0';

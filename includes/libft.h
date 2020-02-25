@@ -521,7 +521,7 @@ double				ft_strtod(const char *str);
 /*
 **	Allocate and return contents of file (fd). Returns NULL in case of  error.
 */
-char				*ft_readfile(int fd, size_t *out_size);
+char *ft_readfile(int fd, size_t *out_size, int buff_size);
 
 /*
 ** Returns 1 if char c is space / tab / etc.
@@ -544,7 +544,7 @@ int					ft_min(int a, int b);
 **	Concatenate text from various number of files.
 **	Takes number of files as first argument and paths to files.
 */
-char				*ft_read_files(int files_nbr, ...);
+char				*ft_read_files(int files_nbr, int buff_size, ...);
 
 /*
 **	Allocates and returns string with exactly one whitespace between words.
