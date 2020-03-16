@@ -33,11 +33,10 @@ set(src_list
         src_list/ft_lstdel_p.c
         src_list/ft_lstdelone.c
         src_list/ft_lstiter.c
-        src_list/ft_lstmap.c
         src_list/ft_lstnew.c
         src_list/ft_lstnew_p.c
         src_list/ft_lstprint.c
-        )
+        src_list/ft_lstmap.c)
 
 set(src_math
         src_math/ft_abs.c

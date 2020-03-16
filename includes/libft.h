@@ -348,9 +348,9 @@ void				ft_lstadd(t_list **alst, t_list *new_elem);
 void				ft_lstiter(t_list *alst, void (*f)(t_list *elem));
 
 /*
-**	Creates a new list, of items (alst), to which (*f) has been applied.
+**	Apply function func to every node of list.
 */
-t_list				*ft_lstmap(t_list *alst, t_list *(*f)(t_list *elem));
+void				ft_lstmap(t_list *list, void (*func)(t_list*));
 
 /*
 **	Obviously gets next line from (fd),
