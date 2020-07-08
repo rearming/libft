@@ -249,6 +249,7 @@ $(NAME)	: $(OBJ_DIR) $(OBJ)
 update:
 	@git submodule init ft_printf
 	@git submodule update
+	@$(shell mv ../sources/gui/buttons/utils/check_positions.c)
 
 # folder
 $(OBJ_DIR) :
